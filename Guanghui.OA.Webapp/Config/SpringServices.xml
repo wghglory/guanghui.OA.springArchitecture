@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+<!--配置Service-->
+ 
+<object name="ActionInfoService" type="Guanghui.OA.BLL.ActionInfoService,Guanghui.OA.BLL" singleton="false" >
+   <property name="CurrentDal" ref="ActionInfoDal" />
+	 <property name="CurrentDbSession" ref="DbSession" />
+</object>
+ 
+<object name="BookService" type="Guanghui.OA.BLL.BookService,Guanghui.OA.BLL" singleton="false" >
+   <property name="CurrentDal" ref="BookDal" />
+	 <property name="CurrentDbSession" ref="DbSession" />
+</object>
+ 
+<object name="DepartmentService" type="Guanghui.OA.BLL.DepartmentService,Guanghui.OA.BLL" singleton="false" >
+   <property name="CurrentDal" ref="DepartmentDal" />
+	 <property name="CurrentDbSession" ref="DbSession" />
+</object>
+ 
+<object name="OrderService" type="Guanghui.OA.BLL.OrderService,Guanghui.OA.BLL" singleton="false" >
+   <property name="CurrentDal" ref="OrderDal" />
+	 <property name="CurrentDbSession" ref="DbSession" />
+</object>
+ 
+<object name="R_User_ActionInfoService" type="Guanghui.OA.BLL.R_User_ActionInfoService,Guanghui.OA.BLL" singleton="false" >
+   <property name="CurrentDal" ref="R_User_ActionInfoDal" />
+	 <property name="CurrentDbSession" ref="DbSession" />
+</object>
+ 
+<object name="RoleService" type="Guanghui.OA.BLL.RoleService,Guanghui.OA.BLL" singleton="false" >
+   <property name="CurrentDal" ref="RoleDal" />
+	 <property name="CurrentDbSession" ref="DbSession" />
+</object>
+ 
+<object name="SearchLogService" type="Guanghui.OA.BLL.SearchLogService,Guanghui.OA.BLL" singleton="false" >
+   <property name="CurrentDal" ref="SearchLogDal" />
+	 <property name="CurrentDbSession" ref="DbSession" />
+</object>
+ 
+<object name="SearchLogGroupByService" type="Guanghui.OA.BLL.SearchLogGroupByService,Guanghui.OA.BLL" singleton="false" >
+   <property name="CurrentDal" ref="SearchLogGroupByDal" />
+	 <property name="CurrentDbSession" ref="DbSession" />
+</object>
+ 
+<object name="UserService" type="Guanghui.OA.BLL.UserService,Guanghui.OA.BLL" singleton="false" >
+   <property name="CurrentDal" ref="UserDal" />
+	 <property name="CurrentDbSession" ref="DbSession" />
+</object>
+ 
+<object name="UserExtService" type="Guanghui.OA.BLL.UserExtService,Guanghui.OA.BLL" singleton="false" >
+   <property name="CurrentDal" ref="UserExtDal" />
+	 <property name="CurrentDbSession" ref="DbSession" />
+</object>
+ 
+<object name="WF_InstanceService" type="Guanghui.OA.BLL.WF_InstanceService,Guanghui.OA.BLL" singleton="false" >
+   <property name="CurrentDal" ref="WF_InstanceDal" />
+	 <property name="CurrentDbSession" ref="DbSession" />
+</object>
+ 
+<object name="WF_StepService" type="Guanghui.OA.BLL.WF_StepService,Guanghui.OA.BLL" singleton="false" >
+   <property name="CurrentDal" ref="WF_StepDal" />
+	 <property name="CurrentDbSession" ref="DbSession" />
+</object>
+ 
+<object name="WF_TempService" type="Guanghui.OA.BLL.WF_TempService,Guanghui.OA.BLL" singleton="false" >
+   <property name="CurrentDal" ref="WF_TempDal" />
+	 <property name="CurrentDbSession" ref="DbSession" />
+</object>
+</objects>

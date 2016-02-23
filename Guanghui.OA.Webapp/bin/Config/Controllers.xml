@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--copy always-->
+
+<objects xmlns="http://www.springframework.net">
+
+  <object type="Guanghui.OA.Webapp.Controllers.BookController,Guanghui.OA.Webapp" singleton="false" >
+    <property name="BookService" ref="BookService" />
+  </object>
+
+</objects>

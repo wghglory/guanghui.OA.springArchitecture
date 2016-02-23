@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+<!--配置Dal-->
+
+ 
+ <object name="ActionInfoDal" type="Guanghui.OA.EFDAL.ActionInfoDal,Guanghui.OA.EFDAL" singleton="false" >
+ </object>
+ 
+ <object name="BookDal" type="Guanghui.OA.EFDAL.BookDal,Guanghui.OA.EFDAL" singleton="false" >
+ </object>
+ 
+ <object name="DepartmentDal" type="Guanghui.OA.EFDAL.DepartmentDal,Guanghui.OA.EFDAL" singleton="false" >
+ </object>
+ 
+ <object name="OrderDal" type="Guanghui.OA.EFDAL.OrderDal,Guanghui.OA.EFDAL" singleton="false" >
+ </object>
+ 
+ <object name="R_User_ActionInfoDal" type="Guanghui.OA.EFDAL.R_User_ActionInfoDal,Guanghui.OA.EFDAL" singleton="false" >
+ </object>
+ 
+ <object name="RoleDal" type="Guanghui.OA.EFDAL.RoleDal,Guanghui.OA.EFDAL" singleton="false" >
+ </object>
+ 
+ <object name="SearchLogDal" type="Guanghui.OA.EFDAL.SearchLogDal,Guanghui.OA.EFDAL" singleton="false" >
+ </object>
+ 
+ <object name="SearchLogGroupByDal" type="Guanghui.OA.EFDAL.SearchLogGroupByDal,Guanghui.OA.EFDAL" singleton="false" >
+ </object>
+ 
+ <object name="UserDal" type="Guanghui.OA.EFDAL.UserDal,Guanghui.OA.EFDAL" singleton="false" >
+ </object>
+ 
+ <object name="UserExtDal" type="Guanghui.OA.EFDAL.UserExtDal,Guanghui.OA.EFDAL" singleton="false" >
+ </object>
+ 
+ <object name="WF_InstanceDal" type="Guanghui.OA.EFDAL.WF_InstanceDal,Guanghui.OA.EFDAL" singleton="false" >
+ </object>
+ 
+ <object name="WF_StepDal" type="Guanghui.OA.EFDAL.WF_StepDal,Guanghui.OA.EFDAL" singleton="false" >
+ </object>
+ 
+ <object name="WF_TempDal" type="Guanghui.OA.EFDAL.WF_TempDal,Guanghui.OA.EFDAL" singleton="false" >
+ </object>
+</objects>

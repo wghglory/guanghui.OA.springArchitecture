@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+<!--配置DbSession-->
+  <object name="DbSessionFactory" type="Guanghui.OA.DALFactory.DbSessionFactory, Guanghui.OA.DALFactory" singleton="true"  >
+  </object>
+
+  <!--spring.net 通过工厂的实例方法来创建对象的配置-->
+  <!--<object name="DbSession" type="Guanghui.OA.DALFactory.DbSession, Guanghui.OA.DALFactory" singleton="false"  factory-method="GetCurrentDbSession" factory-object="DbSessionFactory" >
+  	 		<property name="ActionInfoDal" ref="ActionInfoDal" />
+ 		<property name="BookDal" ref="BookDal" />
+ 		<property name="DepartmentDal" ref="DepartmentDal" />
+ 		<property name="OrderDal" ref="OrderDal" />
+ 		<property name="R_User_ActionInfoDal" ref="R_User_ActionInfoDal" />
+ 		<property name="RoleDal" ref="RoleDal" />
+ 		<property name="SearchLogDal" ref="SearchLogDal" />
+ 		<property name="SearchLogGroupByDal" ref="SearchLogGroupByDal" />
+ 		<property name="UserDal" ref="UserDal" />
+ 		<property name="UserExtDal" ref="UserExtDal" />
+ 		<property name="WF_InstanceDal" ref="WF_InstanceDal" />
+ 		<property name="WF_StepDal" ref="WF_StepDal" />
+ 		<property name="WF_TempDal" ref="WF_TempDal" />
+  </object>-->
+
+    <!--spring.net 通过工厂的一个静态方法来创建对象的配置。type就直接配置到工厂类型就可以了。-->
+  <object name="DbSession" type="Guanghui.OA.DALFactory.DbSessionFactory, Guanghui.OA.DALFactory" singleton="false"  factory-method="GetCurrentDbSession"  >
+	 		<property name="ActionInfoDal" ref="ActionInfoDal" />
+ 		<property name="BookDal" ref="BookDal" />
+ 		<property name="DepartmentDal" ref="DepartmentDal" />
+ 		<property name="OrderDal" ref="OrderDal" />
+ 		<property name="R_User_ActionInfoDal" ref="R_User_ActionInfoDal" />
+ 		<property name="RoleDal" ref="RoleDal" />
+ 		<property name="SearchLogDal" ref="SearchLogDal" />
+ 		<property name="SearchLogGroupByDal" ref="SearchLogGroupByDal" />
+ 		<property name="UserDal" ref="UserDal" />
+ 		<property name="UserExtDal" ref="UserExtDal" />
+ 		<property name="WF_InstanceDal" ref="WF_InstanceDal" />
+ 		<property name="WF_StepDal" ref="WF_StepDal" />
+ 		<property name="WF_TempDal" ref="WF_TempDal" />
+  </object>
+</objects>

@@ -1,0 +1,9 @@
+D:\VS projects\Guanghui.OA.SpringArchitecture\Guanghui.OA.SpringArchitecture\Guanghui.OA.Common\bin\Debug\Guanghui.OA.Common.dll
+D:\VS projects\Guanghui.OA.SpringArchitecture\Guanghui.OA.SpringArchitecture\Guanghui.OA.Common\bin\Debug\Guanghui.OA.Common.pdb
+D:\VS projects\Guanghui.OA.SpringArchitecture\Guanghui.OA.SpringArchitecture\Guanghui.OA.Common\obj\Debug\Guanghui.OA.Common.dll
+D:\VS projects\Guanghui.OA.SpringArchitecture\Guanghui.OA.SpringArchitecture\Guanghui.OA.Common\obj\Debug\Guanghui.OA.Common.pdb
+D:\VS projects\Guanghui.OA.SpringArchitecture\Guanghui.OA.Common\bin\Debug\Guanghui.OA.Common.dll
+D:\VS projects\Guanghui.OA.SpringArchitecture\Guanghui.OA.Common\bin\Debug\Guanghui.OA.Common.pdb
+D:\VS projects\Guanghui.OA.SpringArchitecture\Guanghui.OA.Common\obj\Debug\Guanghui.OA.Common.dll
+D:\VS projects\Guanghui.OA.SpringArchitecture\Guanghui.OA.Common\obj\Debug\Guanghui.OA.Common.pdb
+D:\VS projects\Guanghui.OA.SpringArchitecture\Guanghui.OA.Common\obj\Debug\Guanghui.OA.Common.csprojResolveAssemblyReference.cache

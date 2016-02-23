@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--copy always-->
+
+<objects xmlns="http://www.springframework.net">
+
+  <!--type：跟类的全名称。   逗号之后是：程序集名称。-->
+  <object name="HttpRuntimeCacheWriter" type="Guanghui.OA.Common.HttpRuntimeCacheWriter,Guanghui.OA.Common" singleton="false" >
+  </object>
+
+  <object name="MemcachedWriter" type="Guanghui.OA.Common.MemcachedWriter,Guanghui.OA.Common" singleton="false" >
+  </object>
+
+  <object name="RedisCacheWriter" type="Guanghui.OA.Common.RedisCacheWriter,Guanghui.OA.Common" singleton="false" >
+  </object>
+  
+  <object name="CacheHelper" type="Guanghui.OA.Common.CacheHelper,Guanghui.OA.Common" singleton="false" >
+    <property name="CacheWriter" ref="MemcachedWriter" />
+  </object>
+
+</objects>

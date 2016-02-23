@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5a012451304e447b8d7cf91521fd9167" Name="Diagram1" >
+        <EntityTypeShape EntityType="DataModel.ActionInfo" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="DataModel.Book" Width="1.5" PointX="9.75" PointY="5.75" />
+        <EntityTypeShape EntityType="DataModel.Department" Width="1.5" PointX="3" PointY="10" />
+        <EntityTypeShape EntityType="DataModel.Order" Width="1.5" PointX="7.5" PointY="7.375" />
+        <EntityTypeShape EntityType="DataModel.R_User_ActionInfo" Width="1.5" PointX="3" PointY="3.625" />
+        <EntityTypeShape EntityType="DataModel.Role" Width="1.5" PointX="3" PointY="6.625" />
+        <EntityTypeShape EntityType="DataModel.SearchLog" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DataModel.SearchLogGroupBy" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DataModel.User" Width="1.5" PointX="5.25" PointY="7.75" />
+        <EntityTypeShape EntityType="DataModel.UserExt" Width="1.5" PointX="7.5" PointY="9.875" />
+        <EntityTypeShape EntityType="DataModel.WF_Instance" Width="1.5" PointX="8" PointY="1.125" />
+        <EntityTypeShape EntityType="DataModel.WF_Step" Width="1.5" PointX="10.25" PointY="1" />
+        <EntityTypeShape EntityType="DataModel.WF_Temp" Width="1.5" PointX="5.75" PointY="1.5" />
+        <AssociationConnector Association="DataModel.FK_ActionInfoR_User_ActionInfo" />
+        <AssociationConnector Association="DataModel.FK_UserOrder" />
+        <AssociationConnector Association="DataModel.FK_UserR_User_ActionInfo" />
+        <AssociationConnector Association="DataModel.FK__UserExt__UserId__3B40CD36" />
+        <AssociationConnector Association="DataModel.FK_WF_InstanceWF_Step" />
+        <AssociationConnector Association="DataModel.FK_WF_TempWF_Instance" />
+        <AssociationConnector Association="DataModel.DepartmentActionInfo" />
+        <AssociationConnector Association="DataModel.DepartmentUser" />
+        <AssociationConnector Association="DataModel.RoleActionInfo" />
+        <AssociationConnector Association="DataModel.UserRole" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
