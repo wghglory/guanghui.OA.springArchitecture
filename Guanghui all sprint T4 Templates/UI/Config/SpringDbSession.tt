@@ -1,0 +1,38 @@
+﻿<#@ template language="C#" debug="false" hostspecific="true"#>
+<#@ include file="EF.Utility.CS.ttinclude"#><#@
+ output extension=".xml"#><#
+
+CodeGenerationTools code = new CodeGenerationTools(this);
+MetadataLoader loader = new MetadataLoader(this);
+CodeRegion region = new CodeRegion(this, 1);
+MetadataTools ef = new MetadataTools(this);
+//修改当前tt模板相对应的edmx模型的位置
+string inputFile = @"..\..\\Guanghui.OA.Model\\DataModel.edmx";
+
+EdmItemCollection ItemCollection = loader.CreateEdmItemCollection(inputFile);
+string namespaceName = code.VsNamespaceSuggestion();
+
+EntityFrameworkTemplateFileManager fileManager = EntityFrameworkTemplateFileManager.Create(this);
+
+#><?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+<!--配置DbSession-->
+  <object name="DbSessionFactory" type="Guanghui.OA.DALFactory.DbSessionFactory, Guanghui.OA.DALFactory" singleton="true"  >
+  </object>
+
+  <!--spring.net 通过工厂的实例方法来创建对象的配置-->
+  <!--<object name="DbSession" type="Guanghui.OA.DALFactory.DbSession, Guanghui.OA.DALFactory" singleton="false"  factory-method="GetCurrentDbSession" factory-object="DbSessionFactory" >
+  	<#
+foreach (EntityType entity in ItemCollection.GetItems<EntityType>().OrderBy(e => e.Name))
+{#> 		<property name="<#=entity.Name#>Dal" ref="<#=entity.Name#>Dal" />
+<#}#>
+  </object>-->
+
+    <!--spring.net 通过工厂的一个静态方法来创建对象的配置。type就直接配置到工厂类型就可以了。-->
+  <object name="DbSession" type="Guanghui.OA.DALFactory.DbSessionFactory, Guanghui.OA.DALFactory" singleton="false"  factory-method="GetCurrentDbSession"  >
+	<#
+foreach (EntityType entity in ItemCollection.GetItems<EntityType>().OrderBy(e => e.Name))
+{#> 		<property name="<#=entity.Name#>Dal" ref="<#=entity.Name#>Dal" />
+<#}#>
+  </object>
+</objects>

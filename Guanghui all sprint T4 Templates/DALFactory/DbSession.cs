@@ -31,15 +31,6 @@ namespace Guanghui.OA.DALFactory
             return Db.SaveChanges();  //ef         
         }
 
-        //public int ExecuteSql(string sql, params SqlParameter[] pars)
-        //{
-        //    return Db.Database.ExecuteSqlCommand(sql, pars);
-        //}
-        //public List<T> ExecuteQuery<T>(string sql, params SqlParameter[] pars)
-        //{
-        //    return Db.Database.SqlQuery<T>(sql, pars).ToList();
-        //}
-
 
         #endregion
 

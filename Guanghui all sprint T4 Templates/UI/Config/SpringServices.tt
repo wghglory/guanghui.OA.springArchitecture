@@ -21,7 +21,9 @@ EntityFrameworkTemplateFileManager fileManager = EntityFrameworkTemplateFileMana
 foreach (EntityType entity in ItemCollection.GetItems<EntityType>().OrderBy(e => e.Name))
 {    
 #> 
- <object name="<#=entity.Name#>Service" type="Guanghui.OA.BLL.<#=entity.Name#>Service,Guanghui.OA.BLL" singleton="false" >
-  </object>
+<object name="<#=entity.Name#>Service" type="Guanghui.OA.BLL.<#=entity.Name#>Service,Guanghui.OA.BLL" singleton="false" >
+   <property name="CurrentDal" ref="<#=entity.Name#>Dal" />
+	 <property name="CurrentDbSession" ref="DbSession" />
+</object>
 <#}#>
 </objects>

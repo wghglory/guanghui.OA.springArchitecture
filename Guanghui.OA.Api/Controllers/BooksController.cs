@@ -6,6 +6,7 @@ namespace Guanghui.OA.Api.Controllers
 {
     public class BooksController : ApiController
     {
+        //由于webapi没有spring注入，会出问题
         IBLL.IBookService BookService = new BLL.BookService();
         //private IBLL.IBookService BookService { get; set; }
         public IQueryable<Book> Get()

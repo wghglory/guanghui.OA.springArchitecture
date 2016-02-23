@@ -19,10 +19,12 @@ namespace Guanghui.OA.Webapp.Controllers
         {
             #region call bll
             int totalCount = 0;
-            return View(BookService.LoadPageEntities(20, 1, out totalCount, u => true, true, o => o.Id));
+            var list = BookService.LoadPageEntities(20, 1, out totalCount, u => true, true, o => o.Id);
+            return View(list);
             #endregion
 
-            #region call api
+            #region call api  //会出问题，因为目前webapi没有注入
+            
             //using (var client = new HttpClient())
             //{
             //    client.BaseAddress = new Uri("http://localhost:48647/");
@@ -36,7 +38,7 @@ namespace Guanghui.OA.Webapp.Controllers
             //        return View(book);
             //    }
             //}
-            //return null; 
+            //return null;
             #endregion
 
         }

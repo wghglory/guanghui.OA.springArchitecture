@@ -11,28 +11,31 @@ namespace Guanghui.OA.BLL
 {
     public abstract class BaseService<T> where T : class, new()
     {
-        //check-out签出的时候，会自动到源代码服务器上下载最新的源代码。
+        public IDbSession CurrentDbSession { get; set; }  //Spring注入
+        public IBaseDal<T> CurrentDal { get; set; }  //Spring注入
 
-        public IDbSession CurrentDbSession
-        {
-            get
-            {
-                //return new DbSession();//暂时
-                return DbSessionFactory.GetCurrentDbSession();
-            }
-        }
-
-        //protected IDbSession CurrentDbSession;//当前类或者是子类
-        protected BaseService()
-        {
-            //CurrentDbSession = DbSessionFactory.GetCurrentDbSession();
-            SetCurrentDal();//构造函数里面调用了 抽象方法：SetCurrentDal
-        }
-
-        public IBaseDal<T> CurrentDal { get; set; }
         //需要给CurrentDal赋值。基类 不知道当前Dal是谁。 子类知道。
         //逼迫子类给父类的一个属性赋值。
         public abstract void SetCurrentDal();
+
+        //public IDbSession CurrentDbSession
+        //{
+        //    get
+        //    {
+        //        //return new DbSession();//暂时
+        //        return DbSessionFactory.GetCurrentDbSession();
+        //    }
+        //}
+
+
+        //protected IDbSession CurrentDbSession;//当前类或者是子类
+        //protected BaseService()
+        //{
+        //    //CurrentDbSession = DbSessionFactory.GetCurrentDbSession();
+        //    SetCurrentDal();//构造函数里面调用了 抽象方法：SetCurrentDal
+        //}
+
+
 
         public T Add(T entity)
         {

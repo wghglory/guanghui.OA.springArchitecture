@@ -28,24 +28,12 @@ using Guanghui.OA.IDAL;
 namespace Guanghui.OA.DALFactory
 {
     public partial class DbSession :IDbSession
-    {
-   
+    { 
 <#
 foreach (EntityType entity in ItemCollection.GetItems<EntityType>().OrderBy(e => e.Name))
 {    
 #>	
-		private I<#=entity.Name#>Dal _<#=entity.Name#>Dal;
-		public I<#=entity.Name#>Dal <#=entity.Name#>Dal
-		{
-			get
-			{
-				if (_<#=entity.Name#>Dal == null)
-				{
-					_<#=entity.Name#>Dal = DalFactory.Get<#=entity.Name#>Dal();
-				}
-				return _<#=entity.Name#>Dal;
-			}
-		}
+		public I<#=entity.Name#>Dal <#=entity.Name#>Dal { get; set; }
 <#}#>
 	}
 
